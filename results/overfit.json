@@ -1,0 +1,24 @@
+{
+ "model": "gateloop",
+ "repo": "LM_2023_GateLoop-transformer-pytorch",
+ "target_repo": "LM_Dec_AttnFree_GateLoop",
+ "category": "AttnFree",
+ "upstream": "lucidrains/gateloop-transformer (MIT)",
+ "unified": [
+  "upstream train.py hparams (gate_loop_heads 512, post-LN)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "overfit",
+ "started": "2026-10-19 17:55:46",
+ "smoke": false,
+ "first_ce": 5.687743663787842,
+ "last_ce": 0.8693754076957703,
+ "passed": false,
+ "pass_loss": 0.5,
+ "steps": 400,
+ "seconds": 41.5,
+ "lr": 0.001,
+ "note": "overfit uses Adam 1e-3 on 4 x 256 bytes; only an implementation check",
+ "bf16": true
+}

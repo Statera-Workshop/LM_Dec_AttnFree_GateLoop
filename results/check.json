@@ -1,0 +1,38 @@
+{
+ "model": "gateloop",
+ "repo": "LM_2023_GateLoop-transformer-pytorch",
+ "target_repo": "LM_Dec_AttnFree_GateLoop",
+ "category": "AttnFree",
+ "upstream": "lucidrains/gateloop-transformer (MIT)",
+ "unified": [
+  "upstream train.py hparams (gate_loop_heads 512, post-LN)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "check",
+ "started": "2026-10-19 14:22:38",
+ "smoke": false,
+ "params": 23888896,
+ "causality": {
+  "causal": true,
+  "uses_input": true,
+  "worst_leak": 0.0,
+  "min_effect": 2.550199270248413,
+  "logit_scale": 2.5715535150299074,
+  "length": 256,
+  "positions": [
+   17,
+   101,
+   200
+  ]
+ },
+ "data_checks": [
+  "enwik8 train bytes  90,000,000 expected  90,000,000 OK",
+  "enwik8 valid bytes   5,000,000 expected   5,000,000 OK",
+  "enwik8 test  bytes   5,000,000 expected   5,000,000 OK",
+  "enwik8 distinct byte values in first 10M train bytes: 200 (vocab 256)",
+  "recall L=512 random gap: 16 answers/sample, keys/values/distractors disjoint OK",
+  "recall L=512 max gap: 16 answers/sample, keys/values/distractors disjoint OK"
+ ],
+ "seconds": 2.2
+}
